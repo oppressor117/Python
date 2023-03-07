@@ -1,0 +1,9 @@
+tick = input("Введите номер билета: ")
+num = [int(n) for n in tick]
+if sum(num[:3]) == sum(num[3:]):
+    print("Счастливый билет!")
+else:
+    print("Несчастливый билет.")
+        
+  
+    
