@@ -1,0 +1,7 @@
+first = int(input("Введите км за первый день: "))
+result = int(input("Введите желаемый результат км: "))
+day = 1
+while first < result:
+    first *= 1.1 
+    day += 1
+print(f"на {day}-й день спортсмен достиг результата - не менее {result} км")
