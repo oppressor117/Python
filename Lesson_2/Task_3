@@ -1,0 +1,11 @@
+my_list = [None, 12, "Hello", 12.3, False]
+my_indef = None
+my_int = 12
+my_string = "Hello"
+my_float = 12.3
+my_bool = False
+print(type(my_indef))
+print(type(my_int))
+print(type(my_string))
+print(type(my_float))
+print(type(my_bool))
