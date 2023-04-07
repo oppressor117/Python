@@ -1,0 +1,14 @@
+class DocMeta(type):
+    obj = None
+    
+    def __call__(self):
+        if self.obj is None:
+            self.obj = type.__call__(self)
+        return self.obj
+    
+class MyClass(metaclass=DocMeta):
+    pass
+
+obj_1 = MyClass()
+obj_2 = MyClass()
+print(obj_1 is obj_2)
