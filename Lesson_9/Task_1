@@ -1,0 +1,29 @@
+class NonNegative:
+    def __init__(self, my_attr):
+        self.my_attr = my_attr
+        
+    def __get__(self, instance, owner):
+        return instance.__dict__[self.my_attr]
+
+    def __set__(self, instance, value):
+        if value < 0:
+            raise ValueError("Не может быть отрицательным!")
+        instance.__dict__[self.my_attr] = value
+        
+class Road:
+    length = NonNegative('length')
+    width = NonNegative('width')
+    weight = 25
+    thickness = 0.05
+
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def full_mass(self, weight, thickness):
+        return f"{self.length} м * {self.width} м * {weight} кг * {thickness} м =" \
+               f" {(self.length * self.width * weight * thickness) / 1000} т"
+
+
+road_1 = Road(5000, -20)
+print(road_1.full_mass(25, 0.05))
