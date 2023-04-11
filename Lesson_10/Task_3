@@ -1,7 +1,10 @@
 word_list = ['attribute', 'класс', 'функция', 'type']
 
-for line in word_list:
-     try:
-         print(bytes(line, 'ascii'))
-     except:
-         print(f"Слово '{line}' невозможно записать в байтовом типе")
+for word in word_list:
+    word_bytes = None
+    try:
+        word_bytes = bytes(word, 'ascii')
+    except:
+        print(f"Слово '{word}' невозможно преобразовать в байтовый тип")
+        continue
+    print(word_bytes)
