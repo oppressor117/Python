@@ -1,9 +1,9 @@
 letter_list = ['разработка', 'сокет', 'декоратор']
 unicode_list = []
 
-def encode_to_unicode_escape(initial_list):
-    for i in range(len(initial_list)):
-        s = initial_list[i].encode('unicode_escape').decode()
+def encode_to_unicode_escape(letter_list):
+    for i in range(len(letter_list)):
+        s = letter_list[i].encode('unicode_escape').decode()
         unicode_list.append(s)
     return unicode_list
 
