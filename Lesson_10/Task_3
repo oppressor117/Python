@@ -1,0 +1,7 @@
+word_list = ['attribute', 'класс', 'функция', 'type']
+
+for line in word_list:
+     try:
+         print(bytes(line, 'ascii'))
+     except:
+         print(f"Слово '{line}' невозможно записать в байтовом типе")
