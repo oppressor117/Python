@@ -1,8 +1,8 @@
 letter_list = ['разработка', 'сокет', 'декоратор']
 unicode_list = []
 
-def encode_to_unicode_escape(letter_list):
-    for i in range(len(letter_list)):
+def encode_to_unicode_escape(initial_list):
+    for i in range(len(initial_list)):
         s = letter_list[i].encode('unicode_escape').decode()
         unicode_list.append(s)
     return unicode_list
@@ -10,9 +10,10 @@ def encode_to_unicode_escape(letter_list):
 
 def type_verif(result_list):
     for i in range(len(result_list)):
-        print(result_list[i])
-        print(type(result_list[i]))
-    return result_list
+            print(
+            '"{}"'.format(result_list[i]),
+            "использует тип: ",
+            type(result_list[i]))
 
 
 print(letter_list)
